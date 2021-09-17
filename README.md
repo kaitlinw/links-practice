@@ -1,5 +1,35 @@
 # Linktree Frontend Assessment
 
+## Considering the structure of the application
+
+I want to build the application in way that allows the user to choose the order of their links. I am not building this feature but I want to make sure that if it was built in the future as a likely user need that the links are not tightly coupled to the type of link that it is. This issue could easily occur with the following logic: 
+``` classicLinks.map(classicLink => classicLink) ``` 
+
+
+We do not want to trap a link within its type. Especially if we were to validate the presence of any classic link before rendering all classic links like so 
+```{ classicLinkPresent && <ClassicLinksList>}```
+
+Instead we want to render the links based on a user preference array and with each ID checking and rendering the link type.
+
+1. user has list of links
+show array of all parent links
+
+2. user chooses order of links
+create user preference array of parent link ID's in order first to last preference
+
+
+*Where to build from:*
+3. links display in order of choice 
+display parent links in order of user preference array.
+- classic
+- musicPlayer
+- showsList
+
+- pluck link data with ID
+- assess link type and return correct link type component
+
+
+
 ![Preview](assets/preview.png)
 
 ## The Problem
