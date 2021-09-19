@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { linkData } from "../../data/linkData.js";
 import ClassicLink from "../ClassicLink/ClassicLink.jsx";
+import MusicPlayer from "../MusicPlayer/MusicPlayer.jsx";
 import styled from "styled-components";
 
 export default class DisplayLinks extends Component {
@@ -14,8 +15,9 @@ export default class DisplayLinks extends Component {
     const linksArray = linkData.links.map((parentLink, key) => {
       switch (parentLink.linkType) {
         case "classic":
-          console.log("inside switch");
           return <ClassicLink key={key} linkData={parentLink} />;
+        case "musicPlayer":
+          return <MusicPlayer key={key} linkData={parentLink} />;
       }
     });
 
