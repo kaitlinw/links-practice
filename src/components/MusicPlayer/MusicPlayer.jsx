@@ -15,15 +15,10 @@ const MusicPlayer = (linkData) => {
       <Button aria-expanded={isExpanded} onClick={toggleSection}>
         <LinkText>{data.title}</LinkText>
       </Button>
-      <MusicAccordion data={data} isExpanded={isExpanded} />
+      <MusicAccordion data-testid="music-accordion" data={data} isExpanded={isExpanded} />
     </>
   );
 };
 
 export default MusicPlayer;
 
-
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;

@@ -19,7 +19,7 @@ const MusicAccordion = (props) => {
       return (
         <Accordion key={key}>
           <MusicItem>
-            <MusicLogo/>
+            <MusicLogo src={result.filePath}/>
             <Link target="_blank" href={result.url}>
             <MusicText>{result.name}</MusicText>
             </Link>

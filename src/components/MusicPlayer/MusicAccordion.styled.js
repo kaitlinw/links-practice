@@ -47,13 +47,13 @@ export const MusicText = styled.div`
   color: #263238;
 `;
 
-export const MusicLogo = styled.div`
+export const MusicLogo = styled.img`
   min-width: 24px;
   min-height: 24px;
   margin-right: 16px;
-  border: 1px solid #dadee0;
 `;
 
 export const Link = styled.a`
   text-decoration: none;
-`;
+  color: #263238;
+  `;
