@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { linkData } from "../../data/linkData.js";
 import ClassicLink from "../ClassicLink/ClassicLink.jsx";
 import MusicPlayer from "../MusicPlayer/MusicPlayer.jsx";
+import ShowsList from "../ShowsList/ShowsList.jsx";
 import styled from "styled-components";
 
 export default class DisplayLinks extends Component {
@@ -10,6 +11,7 @@ export default class DisplayLinks extends Component {
       position: absolute;
       top: 156px;
       left: 24px;
+      max-width: 327px; 
     `;
 
     const linksArray = linkData.links.map((parentLink, key) => {
@@ -18,6 +20,8 @@ export default class DisplayLinks extends Component {
           return <ClassicLink key={key} linkData={parentLink} />;
         case "musicPlayer":
           return <MusicPlayer key={key} linkData={parentLink} />;
+        case "showsList":
+          return <ShowsList key={key} linkData={parentLink} />;
       }
     });
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Button, LinkText } from "../../globalStyles/globalStyles.styled.js";
-import MusicAccordion from "./MusicAccordion.jsx";
+import ShowsAccordion from "./ShowsAccordion.jsx";
 
-const MusicPlayer = (linkData) => {
-  const [isExpanded, setExpanded] = useState(false);
+const ShowsList = (linkData) => {
+  const [isExpanded, setExpanded] = useState(true);
   const data = linkData.linkData;
 
   const toggleSection = () => {
@@ -15,9 +15,9 @@ const MusicPlayer = (linkData) => {
       <Button aria-expanded={isExpanded} onClick={toggleSection}>
         <LinkText>{data.title}</LinkText>
       </Button>
-      <MusicAccordion data={data} isExpanded={isExpanded} />
+      <ShowsAccordion data={data} isExpanded={isExpanded} />
     </>
   );
 };
 
-export default MusicPlayer;
+export default ShowsList;

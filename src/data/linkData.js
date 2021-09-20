@@ -70,6 +70,7 @@ export const linkData = {
     },
     {
       parentLinkId: "5",
+      linkType: "showsList",
       title: "UK Tour",
       songkickLogo: "",
       results: [

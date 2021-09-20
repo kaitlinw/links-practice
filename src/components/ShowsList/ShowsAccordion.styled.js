@@ -6,10 +6,8 @@ export const Accordion = styled.div`
   display: flex;
   flex-direction: column;
   background: #f5f7f8;
-  padding: 16px;
   margin-top: -16px;
 `;
-
 export const DecorativeLine = styled.div`
   align-self: center;
   background: #dadee0;
@@ -19,41 +17,40 @@ export const DecorativeLine = styled.div`
   border-radius: 2px;
 `;
 
-export const MusicItem = styled.div`
+export const ShowItem = styled.div`
   display: flex;
-  flex-direction: row;
-  margin-bottom: 9px;
+  flex-direction: column;
+  margin-left: 16px;
+  margin: 16px;
 `;
 
-export const MusicText = styled.div`
-  width: 100%;
-
-  left: 17.13%;
-  right: 43.73%;
-  top: 42.08%;
-  bottom: 52.08%;
-
+export const DateText = styled.div`
   font-family: Karla;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 28px;
+  line-height: 26px;
   /* identical to box height, or 175% */
-
-  display: flex;
-  align-items: center;
   letter-spacing: -0.32px;
-
   color: #263238;
 `;
 
-export const MusicLogo = styled.div`
-  min-width: 24px;
-  min-height: 24px;
-  margin-right: 16px;
-  border: 1px solid #dadee0;
+export const LocationText = styled.p`
+  font-family: Karla;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.24px;
+  margin: 9px 0;
+  color: #263238;
 `;
 
 export const Link = styled.a`
   text-decoration: none;
 `;
+
+export const SongKickLogo = styled.img``;
