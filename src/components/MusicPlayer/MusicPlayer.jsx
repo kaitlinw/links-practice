@@ -21,3 +21,9 @@ const MusicPlayer = (linkData) => {
 };
 
 export default MusicPlayer;
+
+
+function sum(a, b) {
+  return a + b;
+}
+module.exports = sum;
