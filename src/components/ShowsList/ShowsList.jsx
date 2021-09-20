@@ -3,7 +3,7 @@ import { Button, LinkText } from "../../globalStyles/globalStyles.styled.js";
 import ShowsAccordion from "./ShowsAccordion.jsx";
 
 const ShowsList = (linkData) => {
-  const [isExpanded, setExpanded] = useState(true);
+  const [isExpanded, setExpanded] = useState(false);
   const data = linkData.linkData;
 
   const toggleSection = () => {
