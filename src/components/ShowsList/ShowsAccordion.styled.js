@@ -20,6 +20,7 @@ export const DecorativeLine = styled.div`
 export const ShowItem = styled.div`
   display: flex;
   flex-direction: column;
+  align-content: space-around;
   margin-left: 16px;
   margin: 16px;
 `;
@@ -54,3 +55,16 @@ export const Link = styled.a`
 `;
 
 export const SongKickLogo = styled.img``;
+
+export const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+`;
+
+export const FlexRow = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+`;

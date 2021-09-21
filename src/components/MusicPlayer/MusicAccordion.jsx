@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ArrowIcon } from "../../globalStyles/globalStyles.styled";
+
 import {
   Accordion,
   MusicItem,
@@ -9,22 +11,20 @@ import {
   Link,
 } from "./MusicAccordion.styled.js";
 
-// TODO: get the svg icon import working here in the MusicLogo component. Priority has been given to completing other parts of this project.
-
 const MusicAccordion = (props) => {
-
   if (props.isExpanded) {
     const results = props.data.results;
     return results.map((result, key) => {
       return (
         <Accordion key={key}>
           <MusicItem>
-            <MusicLogo src={result.filePath}/>
-            <Link target="_blank" href={result.url}>
+            <MusicLogo src={result.filePath} />
             <MusicText>{result.name}</MusicText>
+            <Link target="_blank" href={result.url}>
+              <ArrowIcon src={"/assets/icons/arrow.svg"} />
             </Link>
           </MusicItem>
-          <DecorativeLine/>
+          <DecorativeLine />
         </Accordion>
       );
     });

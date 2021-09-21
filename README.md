@@ -1,40 +1,47 @@
-# Linktree Frontend Assessment
+# Links Practice
+
+To start the application run the following:
+
+`npm install`
+
+`npm start` 
+
+View on `localhost:3000`
+
+To run tests
+
+`npm test`
 
 ## Considering the structure of the application
 
-I want to build the application in way that allows the user to choose the order of their links. I am not building this feature but I want to make sure that if it was built in the future as a likely user need that the links are not tightly coupled to the type of link that it is. This issue could easily occur with the following logic: 
-``` classicLinks.map(classicLink => classicLink) ``` 
-
+I want to build the application in way in the future, it that allows the user to choose the order of their links. I am not building this feature but I want to make sure that if it was built in the future as a likely user need that the links are not tightly coupled to the type of link that it is. This issue could easily occur with the following logic: 
+``` classicLinks.map(classicLink => return classicLink) ``` 
 
 We do not want to trap a link within its type. Especially if we were to validate the presence of any classic link before rendering all classic links like so 
-```{ classicLinkPresent && <ClassicLinksList>}```
+```{ classicLinkPresent && <ClassicLinksList/>}```
 
-Instead we want to render the links based on a user preference array and with each ID checking and rendering the link type.
+Instead we want to render the links based on the assumption of a user preference array.
 
-1. user has list of links
-show array of all parent links
+1. user has list of links (Starting point of this application)
+2. user chooses order of links (not build into this project)
+3. links display in order of user choice 
 
-2. user chooses order of links
-create user preference array of parent link ID's in order first to last preference
+This consideration as affected the structure of this application and currently links return in the order of the data object. This allows for the preference logic to be done in either the front or backend.
 
+## Hindsight
+I noticed at the end there is the requirement of one link opening should cause the other link to close. This means the logic for the opening and closing buttons should have been on a level higher. This would involve a considerable but definitely useful refactor in the long term. 
 
-*Where to build from:*
-3. links display in order of choice 
-display parent links in order of user preference array.
-- classic
-- musicPlayer
-- showsList
+Additionally there could be another wrapper in the showsList component as it currently returns as each individual show which makes it a bit of a refactor to get the songkick logo in there. There is certainly room for refactoring as there are divs that can be removed in each component. 
 
-- pluck link data with ID
-- assess link type and return correct link type component
+More tests can certainly be written and adding the music player component would be next if I had more time. Additionally, git commit messages are a very basic example of the conventional commit style that I use typically in more detail. I have found this depends on the team you are working in and their requirements.
 
+-----------------------------------------------------------------------------------------------
 
 
 ![Preview](assets/preview.png)
 
 ## The Problem
 
-We have three new link types for our users profile pages, (such as https://linktr.ee/guardian)
 
 1. Classic
 
@@ -60,7 +67,6 @@ You are required to build the profile UI and the front end components for the ne
 
 ## Front End Assets
 
-A sketch file is available within this repository. You can upload this to [Figma](https://www.figma.com/) to view in fine grain detail.
 All assets are supplied with in the [/assets](./assets) dir in this repo.
 You can import fonts from [Google Fonts](https://fonts.google.com/).
 

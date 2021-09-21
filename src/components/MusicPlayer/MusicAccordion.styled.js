@@ -56,4 +56,4 @@ export const MusicLogo = styled.img`
 export const Link = styled.a`
   text-decoration: none;
   color: #263238;
-  `;
+`;

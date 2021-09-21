@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ArrowIcon } from "../../globalStyles/globalStyles.styled";
+
 import {
   Accordion,
   ShowItem,
@@ -7,6 +9,8 @@ import {
   LocationText,
   DateText,
   Link,
+  FlexColumn,
+  FlexRow,
 } from "./ShowsAccordion.styled.js";
 
 const ShowsAccordion = (props) => {
@@ -14,15 +18,20 @@ const ShowsAccordion = (props) => {
     const results = props.data.results;
     return results.map((result, key) => {
       return (
-          <Accordion key={key}>
-            <ShowItem>
-              <Link target="_blank" href={result.url}>
-                <DateText>{result.formattedDate}</DateText>
-                <LocationText>{result.location}</LocationText>
-              </Link>
-              <DecorativeLine />
-            </ShowItem>
-          </Accordion>
+        <Accordion key={key}>
+          <ShowItem>
+            <Link target="_blank" href={result.url}>
+              <FlexRow>
+                <FlexColumn>
+                  <DateText>{result.formattedDate}</DateText>
+                  <LocationText>{result.location}</LocationText>
+                </FlexColumn>
+                <ArrowIcon src={"/assets/icons/arrow.svg"} />
+              </FlexRow>
+            </Link>
+            <DecorativeLine />
+          </ShowItem>
+        </Accordion>
       );
     });
   } else return null;
