@@ -6,7 +6,6 @@ import { render, fireEvent, screen } from "@testing-library/react";
 describe("ShowsList", () => {
   beforeEach(() => {
     const showData = linkData.links.find((link) => {
-      console.log(link)
       return link.linkType === "showsList";
     });
 

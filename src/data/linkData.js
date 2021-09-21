@@ -16,8 +16,8 @@ export const linkData = {
     {
       parentLinkId: "3",
       linkType: "classic",
-      title: "Tour Dates",
-      url: "https://www.edsheeran.com/tour",
+      title: "website",
+      url: "https://www.edsheeran.com/",
     },
     {
       parentLinkId: "4",
